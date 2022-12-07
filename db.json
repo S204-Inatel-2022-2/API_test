@@ -1,0 +1,167 @@
+{
+  "schedule": [
+    {
+      "id": 0,
+      "scheduleId": 0,
+      "subjects": "C202",
+      "classLocation": "Sala 16",
+      "startTime": "19:30",
+      "endOfClass": "21:10"
+    },
+    {
+      "id": 1
+    },
+    {
+      "id": 2,
+      "scheduleId": 0,
+      "subjects": "C202",
+      "classLocation": "Sala 16",
+      "startTime": "19:30",
+      "endOfClass": "21:10"
+    },
+    {
+      "id": 3,
+      "scheduleId": 0,
+      "subjects": "C202",
+      "classLocation": "Sala 16",
+      "startTime": "19:30",
+      "endOfClass": "21:10"
+    }
+  ],
+  "requirement": [
+    {
+      "id": 0,
+      "subjectId": 0,
+      "requirementType": "Substutiva",
+      "quantity": 1
+    },
+    {
+      "id": 1,
+      "subjectId": 0,
+      "requirementType": "Substutiva",
+      "quantity": 1
+    },
+    {
+      "subjectId": "0",
+      "requirementType": "SubjectDependenceID1",
+      "quantity": 0,
+      "id": 2
+    },
+    {
+      "subjectId": "0",
+      "requirementType": "SubjectDependenceID1",
+      "quantity": 0,
+      "id": 3
+    }
+  ],
+  "subject": [
+    {
+      "id": 0,
+      "subjectId": 0,
+      "name": "S204 - Engenharia de Produto de Software ",
+      "totalHour": "30",
+      "credit": 4
+    },
+    {
+      "id": 1,
+      "subjectId": 0,
+      "requirementType": "Substutiva",
+      "quantity": 1
+    },
+    {
+      "id": 2,
+      "subjectId": 0,
+      "requirementType": "Substutiva",
+      "quantity": 1
+    }
+  ],
+  "student": [
+    {
+      "id": 0,
+      "studentId": 0,
+      "name": "Mateus",
+      "birthday": "14-01-2000",
+      "period": 8,
+      "course": "Engenharia de Software",
+      "email": "mateus.carvalho@ges.inatel.br",
+      "registrationNumber": 34,
+      "startYear": "2019",
+      "forecastClosure": "2024",
+      "average": 0,
+      "volunteerWork": "Academic Directory"
+    },
+    {
+      "id": 1,
+      "studentId": 0,
+      "name": "Mateus",
+      "birthday": "14-01-2000",
+      "period": 8,
+      "course": "Engenharia de Software",
+      "email": "mateus.carvalho@ges.inatel.br",
+      "registrationNumber": 34,
+      "startYear": "2019",
+      "forecastClosure": "2024",
+      "average": 0,
+      "volunteerWork": "Academic Directory"
+    }
+  ],
+  "history": [
+    {
+      "id": 0,
+      "subjectId": 0,
+      "studentId": 0,
+      "score": 0,
+      "conclusion": "2024",
+      "schoolAttendance": 0
+    },
+    {
+      "id": 1,
+      "subjectId": 0,
+      "studentId": 0,
+      "score": 0,
+      "conclusion": "2024",
+      "schoolAttendance": 0
+    }
+  ],
+  "class": [
+    {
+      "id": 0,
+      "classId": 0
+    },
+    {
+      "id": 1,
+      "classId": 0
+    },
+    {
+      "id": 2
+    },
+    {
+      "id": 3
+    },
+    {
+      "id": 4
+    }
+  ],
+  "course": [
+    {
+      "id": 0,
+      "courseId": 0,
+      "name": "Engenharia de Software",
+      "period": 8,
+      "beggining": "2019",
+      "coordinator": "Renzo",
+      "maxStudentsPerPeriod": 23,
+      "enrollmentOpen": true
+    },
+    {
+      "id": 1,
+      "courseId": 0,
+      "name": "Engenharia de Software",
+      "period": 8,
+      "beggining": "2019",
+      "coordinator": "Renzo",
+      "maxStudentsPerPeriod": 23,
+      "enrollmentOpen": true
+    }
+  ]
+}

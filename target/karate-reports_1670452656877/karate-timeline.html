@@ -1,0 +1,32 @@
+<!DOCTYPE HTML>
+<html lang="en">
+  <head>
+    <meta charset="utf-8"/>
+    <title>Karate Timeline</title>
+    <style>
+      body, html { font-family: arial, sans-serif; font-size: 11pt; }
+      #visualization { box-sizing: border-box; width: 100%; height: 300px; }
+      .vis-item.failed { background-color: #F2928C; }
+      .page-heading { padding: 0.5em; margin-bottom: 0.5em; background-color: lightcyan; border: 1px solid gray; }
+    </style>
+    <script src="res/vis.min.js"></script>
+    <link href="res/vis.min.css" rel="stylesheet" type="text/css" />
+  </head>
+  <body>
+    <div class="page-heading">
+      <a href="karate-summary.html">Summary</a>
+    </div>     
+    <div id="visualization"></div>
+    <script>
+var groups = [{"content":"main","id":1}];
+var items = [{"id":1,"group":1,"content":"src\/test\/java\/secretary[1:3]","start":1670452640147,"end":1670452640377,"title":"src\/test\/java\/secretary[1:3] 19:37:20.147-19:37:20.377 Get\/history\/{historyId}"},{"id":2,"group":1,"content":"src\/test\/java\/secretary[2:11]","start":1670452640381,"end":1670452640388,"title":"src\/test\/java\/secretary[2:11] 19:37:20.381-19:37:20.388 Get\/class\/{classId}"},{"id":3,"group":1,"content":"src\/test\/java\/secretary[3:19]","start":1670452640392,"end":1670452640446,"title":"src\/test\/java\/secretary[3:19] 19:37:20.392-19:37:20.446 Get\/course"},{"id":4,"group":1,"content":"src\/test\/java\/secretary[4:32]","start":1670452640449,"end":1670452640465,"title":"src\/test\/java\/secretary[4:32] 19:37:20.449-19:37:20.465 Get\/course\/{courseId}"},{"id":5,"group":1,"content":"src\/test\/java\/secretary[5:46]","start":1670452640469,"end":1670452640476,"title":"src\/test\/java\/secretary[5:46] 19:37:20.469-19:37:20.476 \/class"},{"id":6,"group":1,"content":"src\/test\/java\/secretary[6:51]","start":1670452640479,"end":1670452640488,"title":"src\/test\/java\/secretary[6:51] 19:37:20.479-19:37:20.488 \/subject\/{subjectId}\/requeriment"},{"id":7,"group":1,"content":"src\/test\/java\/secretary[7:57]","start":1670452640492,"end":1670452640498,"title":"src\/test\/java\/secretary[7:57] 19:37:20.492-19:37:20.498 Delete\/class\/{classID}","className":"failed"}];
+</script>
+    <script>
+      var container = document.getElementById('visualization');
+      var timeline = new vis.Timeline(container);
+      timeline.setOptions({groupOrder: 'content'});
+      timeline.setGroups(new vis.DataSet(groups));
+      timeline.setItems(new vis.DataSet(items));
+    </script>
+  </body>
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE HTML>
+<html lang="en">
+  <head>
+    <meta charset="utf-8"/>
+    <title>Karate Timeline</title>
+    <style>
+      body, html { font-family: arial, sans-serif; font-size: 11pt; }
+      #visualization { box-sizing: border-box; width: 100%; height: 300px; }
+      .vis-item.failed { background-color: #F2928C; }
+      .page-heading { padding: 0.5em; margin-bottom: 0.5em; background-color: lightcyan; border: 1px solid gray; }
+    </style>
+    <script src="res/vis.min.js"></script>
+    <link href="res/vis.min.css" rel="stylesheet" type="text/css" />
+  </head>
+  <body>
+    <div class="page-heading">
+      <a href="karate-summary.html">Summary</a>
+    </div>     
+    <div id="visualization"></div>
+    <script>
+var groups = [{"content":"main","id":1}];
+var items = [{"id":1,"group":1,"content":"src\/test\/java\/student[1:3]","start":1670445411099,"end":1670445411306,"title":"src\/test\/java\/student[1:3] 17:36:51.099-17:36:51.306 Get\/schedule"},{"id":2,"group":1,"content":"src\/test\/java\/student[2:10]","start":1670445411311,"end":1670445411321,"title":"src\/test\/java\/student[2:10] 17:36:51.311-17:36:51.321 Get\/schedule\/{scheduleID}"},{"id":3,"group":1,"content":"src\/test\/java\/student[3:18]","start":1670445411324,"end":1670445411331,"title":"src\/test\/java\/student[3:18] 17:36:51.324-17:36:51.331 Get\/requirement"},{"id":4,"group":1,"content":"src\/test\/java\/student[4:27]","start":1670445411334,"end":1670445411341,"title":"src\/test\/java\/student[4:27] 17:36:51.334-17:36:51.341 Get\/requirement\/{requirementId}"},{"id":5,"group":1,"content":"src\/test\/java\/student[5:35]","start":1670445411344,"end":1670445411351,"title":"src\/test\/java\/student[5:35] 17:36:51.344-17:36:51.351 Get\/subject"},{"id":6,"group":1,"content":"src\/test\/java\/student[6:42]","start":1670445411354,"end":1670445411361,"title":"src\/test\/java\/student[6:42] 17:36:51.354-17:36:51.361 Get\/subject\/id"},{"id":7,"group":1,"content":"src\/test\/java\/student[7:50]","start":1670445411364,"end":1670445411393,"title":"src\/test\/java\/student[7:50] 17:36:51.364-17:36:51.393 POST\/student\/{studentId}\/subscription","className":"failed"},{"id":8,"group":1,"content":"src\/test\/java\/student[8:62]","start":1670445411397,"end":1670445411402,"title":"src\/test\/java\/student[8:62] 17:36:51.397-17:36:51.402 Get\/schedule"},{"id":9,"group":1,"content":"src\/test\/java\/student[9:70]","start":1670445411405,"end":1670445411411,"title":"src\/test\/java\/student[9:70] 17:36:51.405-17:36:51.411 Get\/schedule\/{scheduleID}","className":"failed"},{"id":10,"group":1,"content":"src\/test\/java\/student[10:79]","start":1670445411414,"end":1670445411420,"title":"src\/test\/java\/student[10:79] 17:36:51.414-17:36:51.420 Get\/requirement"},{"id":11,"group":1,"content":"src\/test\/java\/student[11:89]","start":1670445411422,"end":1670445411430,"title":"src\/test\/java\/student[11:89] 17:36:51.422-17:36:51.430 Get\/requirement\/{requirementId}"},{"id":12,"group":1,"content":"src\/test\/java\/student[12:98]","start":1670445411432,"end":1670445411437,"title":"src\/test\/java\/student[12:98] 17:36:51.432-17:36:51.437 Get\/subject"},{"id":13,"group":1,"content":"src\/test\/java\/student[13:106]","start":1670445411440,"end":1670445411440,"title":"src\/test\/java\/student[13:106] 17:36:51.440-17:36:51.440 Get\/subject\/id","className":"failed"}];
+</script>
+    <script>
+      var container = document.getElementById('visualization');
+      var timeline = new vis.Timeline(container);
+      timeline.setOptions({groupOrder: 'content'});
+      timeline.setGroups(new vis.DataSet(groups));
+      timeline.setItems(new vis.DataSet(items));
+    </script>
+  </body>
+</html>
